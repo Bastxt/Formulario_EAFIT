@@ -1,0 +1,232 @@
+//Generación de alertas
+/**
+ * @description Funcion de generacion de alertas
+ * @param {String} title 
+ * @param {String} body 
+ */
+function confAlert(title, body) {
+    $('#msmAlertTitle').text(title);
+    $('#msmAlertBody').text(body);
+    $('#msmAlertModal').modal('show');
+}
+
+
+//validaciones
+//Formulario Datos Personales
+/**
+ * @description Evento de escucha para bloqueo de submit
+ */
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        var form_dat_per = document.getElementsByClassName('dat_per');
+        var validation_dat_per = Array.prototype.filter.call(form_dat_per, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    confAlert('Formulario incompleto','Porfavor complete correctamente el formulario')
+                }
+                else {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $('#dat_per_sec').fadeOut("slow");
+                    $('#dat_per_sec').hide();
+
+                    $('#sub_title_form').find('.sub_tl_form').text('Programa Academico')
+
+                    $('#pro_aca_sec').fadeIn("slow");
+                    $('#pro_aca_sec').show();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+
+//Formulario Programa Academico
+/**
+ * @description Evento de escucha para bloqueo de submit
+ */
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        var form_pro_aca = document.getElementsByClassName('pro_aca');
+        var validation_pro_aca = Array.prototype.filter.call(form_pro_aca, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    confAlert('Formulario incompleto','Porfavor complete correctamente el formulario')
+                }
+                else {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $('#pro_aca_sec').fadeOut("slow");
+                    $('#pro_aca_sec').hide();
+
+                    $('#sub_title_form').find('.sub_tl_form').text('Información Academica')
+
+                    $('#inf_aca_sec').fadeIn("slow");
+                    $('#inf_aca_sec').show();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+//Formulario Informacion Academica
+/**
+ * @description Evento de escucha para bloqueo de submit
+ */
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        var form_inf_aca = document.getElementsByClassName('inf_aca');
+        var validation_inf_aca = Array.prototype.filter.call(form_inf_aca, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    confAlert('Formulario incompleto','Porfavor complete correctamente el formulario')
+                }
+                else {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $('#inf_aca_sec').fadeOut("slow");
+                    $('#inf_aca_sec').hide();
+
+                    $('#sub_title_form').find('.sub_tl_form').text('Dominio de idiomas')
+
+                    $('#dom_idi_sec').fadeIn("slow");
+                    $('#dom_idi_sec').show();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+
+//Formulario Dominio de idiomas
+/**
+ * @description Evento de escucha para bloqueo de submit
+ */
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        var form_dom_idi = document.getElementsByClassName('dom_idi');
+        var validation_dom_idi = Array.prototype.filter.call(form_dom_idi, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    confAlert('Formulario incompleto','Porfavor complete correctamente el formulario')
+                }
+                else {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    $('#dom_idi_sec').fadeOut("slow");
+                    $('#dom_idi_sec').hide();
+
+                    $('#sub_title_form').find('.sub_tl_form').text('Información ICFES')
+
+                    $('#inf_icfes_sec').fadeIn("slow");
+                    $('#inf_icfes_sec').show();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+//Formulario informacion ICFES
+/**
+ * @description Evento de escucha para bloqueo de submit
+ */
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        var form_inf_icfes = document.getElementsByClassName('inf_icfes');
+        var validation_inf_icfes = Array.prototype.filter.call(form_inf_icfes, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    confAlert('Formulario incompleto','Porfavor complete correctamente el formulario')
+                }
+                else {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    alert('ok');
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+//Formulario 2
+
+$('#return_pro_aca').click(function () {
+    $('#pro_aca_sec').fadeOut("slow");
+    $('#pro_aca_sec').hide();
+
+    $('#sub_title_form').find('.sub_tl_form').text('Datos Personales    ')
+
+    $('#dat_per_sec').fadeIn("slow");
+    $('#dat_per_sec').show();
+});
+
+//Formulario 3
+
+$('#return_inf_aca').click(function () {
+    $('#inf_aca_sec').fadeOut("slow");
+    $('#inf_aca_sec').hide();
+
+    $('#sub_title_form').find('.sub_tl_form').text('Programa Academico    ')
+
+    $('#pro_aca_sec').fadeIn("slow");
+    $('#pro_aca_sec').show();
+});
+
+
+
+//Formulario 4
+$('#return_dom_idi').click(function () {
+    $('#dom_idi_sec').fadeOut("slow");
+    $('#dom_idi_sec').hide();
+
+    $('#sub_title_form').find('.sub_tl_form').text('Información Academica    ')
+
+    $('#inf_aca_sec').fadeIn("slow");
+    $('#inf_aca_sec').show();
+});
+
+//formulario informacion icfes
+$('#before_inf_icfes').click(function () {
+    $('#inf_icfes_sec').fadeOut("slow");
+    $('#inf_icfes_sec').hide();
+
+    $('#sub_title_form').find('.sub_tl_form').text('Dominio de Idiomas    ')
+
+    $('#dom_idi_sec').fadeIn("slow");
+    $('#dom_idi_sec').show();
+});
+
+$('#return_inf_icfes').click(function () {
+    $('#inf_icfes_sec').fadeOut("slow");
+    $('#inf_icfes_sec').hide();
+
+    $('#sub_title_form').find('.sub_tl_form').text('Dominio de Idiomas    ')
+
+    $('#dom_idi_sec').fadeIn("slow");
+    $('#dom_idi_sec').show();
+});
+
+//opciones deshabilitadas
+function dis_opc(){
+    confAlert('Alerta de Sistema','Funcion en desuso')
+}
