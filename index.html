@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAFIT</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="col nv-side">
+                <div class="navbar bg-nav">
+                    <a id="home" data-tippy-content="Inicio" class="navbar-brand pull-left" href="#" data-toggle="tooltip" data-placement="top"
+                        title="Home">
+                        <img class="icon_nav" src="ASSETS/iconos-home.png" />
+                    </a>
+                    <img class="p_ico" src="ASSETS/eafit_logo.png" width="100px" />
+                    <a id="exit" data-tippy-content="Salir" class="navbar-brand pull-right" href="#" data-toggle="Exit" title="Exit">
+                        <img class="icon_nav" src="ASSETS/iconos-salir.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center h-100">
+            <div class="col-2 h-100 l_con">
+                <ul class="list-group list-group-flush">
+                    <li id="progress_dat_per" data-tippy-content="Progreso Datos Personales" class="list-group-item item_mn" style="color: #11227C;">
+                        <span class="per_icon"></span>1. DATOS PERSONALES
+                    </li>
+                    <li id="progress_pro_aca" data-tippy-content="Progreso programa académico" class="list-group-item item_mn">
+                        <span class="aca_icon"></span>2. PROGRAMA ACADÉMICO
+                    </li>
+                    <li id="progress_inf_aca" data-tippy-content="Progreso Información academica" class="list-group-item item_mn">
+                        <span class="info_aca_icon"></span>3. INFORMACIÓN ACADEMICA
+                    </li>
+                    <li id="progress_gru_fam" data-tippy-content="Progreso grupo familiar" class="list-group-item item_mn">
+                        <span class="gru_fam_icon"></span>4. GRUPO FAMILIAR
+                    </li>
+                    <li id="progress_req_adic" data-tippy-content="Progreso requerimientos adicionales" class="list-group-item item_mn">
+                        <span class="req_icon"></span>5. REQUERIMIENTOS ADICIONALES
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10 h-100 r_con">
+                <div class="row justify-content-center tt_form">
+                    <div class="row container" style="align-items: baseline;">
+                        <div id="title_form" class="col col-3" style="text-align-last: start;">
+                            <p class="tl_form">INSCRIPCIÓN</p>
+                        </div>
+                        <div id="sub_title_form" class="col col-6" style="text-align-last: end;">
+                            <p class="sub_tl_form">Datos Personales</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="text-left" style="width: 74%; margin-left: 0px;">
+
+                <!-- Seccion Formulario [Datos Personales] -->
+                <div id="dat_per_sec" class="body_form h-100">
+                    <div class="row justify-content-center h-100">
+                        <div class="col col-9">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">La información diligenciada en este formulario podrá
+                                        ser
+                                        guardada en cualquier momento. Si aún no tiene todos los documentos que se
+                                        solicitan, pódras adjuntarlos hasta antes de enviar tu solicitud de incripción
+                                    </p>
+                                    <form id="dat_per" class="dat_per" novalidate>
+                                        <div class="form-group txt-eafit">
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="Nom">Nombre</label>
+                                                        <input id="Nom" onkeyup="verf_text(this)" data-tippy-content="Digite su Nombre"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Nombre" name="OBKey__704_1"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="P_ape">Primer Apellido</label>
+                                                        <input id="P_ape" onkeyup="verf_text(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Primer Apellido"
+                                                            data-tippy-content="Digite su primer apellido."
+                                                            name="OBKey__705_1" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="S_ape">Segundo Apellido</label>
+                                                        <input id="S_ape" onkeyup="verf_text(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Segundo Apellido"
+                                                            data-tippy-content="Digite su segundo apellido."
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="doc_type">Tipo de Documento</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="doc_type"
+                                                            data-tippy-content="Seleccione su tipo de documento"
+                                                            name="OBKey__706_1" required>
+                                                            <option></option>
+                                                            <option>C.C</option>
+                                                            <option>T.I</option>
+                                                            <option>C.E</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="aux_1">Numero Documento</label>
+                                                        <input id="aux_1" onkeyup="verf_num(this)" 
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Numero Documento" data-tippy-content="Digite su numero de documento"
+                                                            name="OBKey__707_1" required>
+                                                        <input id="val_btn" type="button" value="validación"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="fchN">Fecha de Nacimiento</label>
+                                                        <input id="fchN"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="date" placeholder="Fecha de Nacimiento"
+                                                            data-tippy-content="Complete su fecha de nacimiento" name="OBKey__708_1" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="luN">Lugar de Nacimiento</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="luN" data-tippy-content="Seleccione su lugar de nacimiento" name="OBKey__709_1"
+                                                            required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="gen">Género</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="gen" data-tippy-content="Seleccione su género" name="OBKey__710_1" required>
+                                                            <option></option>
+                                                            <option>Masculino</option>
+                                                            <option>Femenino</option>
+                                                            <option>Otros</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="estC">Estado Civil</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="estC" data-tippy-content="Seleccione su estado civil" name="OBKey__711_1" required>
+                                                            <option></option>
+                                                            <option>Soltero</option>
+                                                            <option>Casado</option>
+                                                            <option>Union Libre</option>
+                                                            <option>Otro</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="rh">RH</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="rh" data-tippy-content="seleccione su RH" name="OBKey__712_1" required>
+                                                            <option></option>
+                                                            <option>O</option>
+                                                            <option>A</option>
+                                                            <option>B</option>
+                                                            <option>AB</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="eps">EPS</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="esp" data-tippy-content="Seleccione su EPS" name="OBKey__713_1" required>
+                                                            <option></option>
+                                                            <option>EPS 1</option>
+                                                            <option>EPS 2</option>
+                                                            <option>EPS 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="dir">Dirección de Residencia</label>
+                                                        <input id="dir" onkeyup="verf_text(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Dirección de Residencia"
+                                                            data-tippy-content="Digite su dirección de residencia" name="OBKey__714_1"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="estS">Estrato Socioeconomico</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="estS" data-tippy-content="Seleccione su estrato socioeconomico" name="OBKey__715_1"
+                                                            required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>opc 2</option>
+                                                            <option>opc 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="repSN">¿Practica algún deporte
+                                                            representativo?</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="repS" name="rep"
+                                                                class="custom-control-input" title="Si" required>
+                                                            <label class="custom-control-label" for="repS">Si</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="repN" name="rep"
+                                                                class="custom-control-input" title="No" required>
+                                                            <label class="custom-control-label" for="repN">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="Lab_N">Laboras Actualmente?</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="labS" name="labAc"
+                                                                class="custom-control-input" title="Si" required>
+                                                            <label class="custom-control-label" for="labS">Si</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="labN" name="labAc"
+                                                                class="custom-control-input" title="No" required>
+                                                            <label class="custom-control-label" for="labN">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group float-right">
+                                <button id="continue_u" type="submit" form="dat_per"
+                                    class="btn btn-info">Continuar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col col-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">Opciones</p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="card-text txt-eafit selc" data-tippy-content="Guardar progreso" style="display: flex;"><span
+                                            class="guardar_icon"></span>GUARDAR</a>
+                                    <a class="card-text txt-eafit selc" data-tippy-content="Limpiar formulario actual" style="display: flex;"><span
+                                            class="limpiar_icon"></span>LIMPIAR</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-row">
+                                        <div class="col col-6">
+
+                                        </div>
+                                        <div class="col col-6" style="text-align-last: end;">
+                                            <a id="dis_opc" onclick="dis_opc()" class="card-text txt-eafit selc"
+                                                style="">ADELANTE<span class="ade_icon"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seccion Formulario [Datos Personales]-->
+
+                <!-- Seccion Formulario [Programa Academico]-->
+                <div id="pro_aca_sec" class="body_form h-100" style="display:none;">
+                    <div class="row justify-content-center h-100">
+                        <div class="col col-9">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <form id="pro_aca" class="pro_aca" novalidate>
+                                        <div class="form-group txt-eafit">
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="type_pro">Tipo de Programa</label>
+                                                        <input id="type_pro" onkeyup="verf_text(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Tipo de Programa"
+                                                            data-tippy-content="Digite el tipo de programa" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="prog">Programa</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="prog" data-tippy-content="Seleccione el programa al que desea aplicar" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="segO">Segunda Opción</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="segO" data-tippy-content="Seleccione un programa como segunda opción" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="ini_sem">¿En qué semestre deseas iniciar?</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="ini_sem" data-tippy-content="Seleccione el semestre en el que desea iniciar" required>
+                                                            <option></option>
+                                                            <option>Semestre 1</option>
+                                                            <option>Semestre 2</option>
+                                                            <option>Semestre 3</option>
+                                                            <option>Semestre 4</option>
+                                                            <option>Semestre 5</option>
+                                                            <option>Semestre 6</option>
+                                                            <option>Semestre 7</option>
+                                                            <option>Semestre 8</option>
+                                                            <option>Semestre 9</option>
+                                                            <option>Semestre 10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="ini_sem">¿Cómo te enteraste del programa?</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="ini_sem" data-tippy-content="Selecciona el medio por el cual nos conociste" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="repSN">¿Has realizado o te encuentras realizando
+                                                            otros estudios de educación superior en una institución
+                                                            diferente a EAFIT?</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="estuS" name="estu"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="si" required>
+                                                            <label class="custom-control-label" for="estuS">Si</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="estuN" name="estu"
+                                                                class=" form-check-input custom-control-input"
+                                                                title="No" value="no" required>
+                                                            <label class="custom-control-label" for="estuN">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="rh">Tipo de aspirante</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="rh" data-tippy-content="Seleccione si es primera vez o transferencia externa" required>
+                                                            <option></option>
+                                                            <option>Primera Vez</option>
+                                                            <option>Transferencia externa</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="dir">Queremos conocer cómo vas a pagar tus estudios,
+                                                            con el fin de ayudarte si así lo necesitas. Selecciona
+                                                            el/los medios de pago que utilizaras.</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE1" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE1">Recursos
+                                                                Propios</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE2" name="mPE"
+                                                                class=" form-check-input custom-control-input"
+                                                                title="No" value="opc2" required>
+                                                            <label class="custom-control-label"
+                                                                for="mPE2">Empresa</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE3" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE3">Financiación
+                                                                externa</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE4" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE4">Crédito
+                                                                ICETEX</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE5" name="mPE"
+                                                                class=" form-check-input custom-control-input"
+                                                                title="No" value="opc2" required>
+                                                            <label class="custom-control-label" for="mPE5">Voy a
+                                                                solicitar crédito EAFIT A Tu Alcance</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE6" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE6">Beca
+                                                                externa</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE7" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE7">Beca
+                                                                Generación-E</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE8" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE8">Estoy
+                                                                participando en una convocatoria de beca EAFIT.</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="mPE9" name="mPE"
+                                                                class="form-check-input custom-control-input" title="Si"
+                                                                value="opc1" required>
+                                                            <label class="custom-control-label" for="mPE9">No estoy
+                                                                seguro. quiero acesoria de EAFIT a tu alcance.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group float-left">
+                                <button id="return_pro_aca" type="button" class="btn btn-info">Regresar</button>
+                            </div>
+                            <div class="form-group float-right">
+                                <button id="cont_pro_aca" type="submit" form="pro_aca"
+                                    class="btn btn-info">Continuar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col col-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">Opciones</p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="guardar_icon"></span>GUARDAR</a>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="limpiar_icon"></span>LIMPIAR</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-row">
+                                        <div class="col col-6">
+                                            <a id="dis_opc" onclick="dis_opc()" class="card-text txt-eafit selc"><span
+                                                    class="atr_icon"></span>ATRAS</a>
+                                        </div>
+                                        <div class="col col-6" style="text-align-last: end;">
+                                            <a id="dis_opc" onclick="dis_opc()"
+                                                class="card-text txt-eafit selc">ADELANTE<span
+                                                    class="ade_icon"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seccion Formulario [Programa Academico]-->
+
+                <!-- Seccion Formulario [Información Académica]-->
+                <div id="inf_aca_sec" class="body_form h-100" style="display:none;">
+                    <div class="row justify-content-center h-100">
+                        <div class="col col-9">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <form id="inf_aca" class="inf_aca" novalidate>
+                                        <div class="form-group txt-eafit">
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="type_pro">Nivel Máximo de estudio alcanzado</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="maxE" data-tippy-content="Seleccione el nivel de estudio maximo alcanzado" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="prog">Nombre Institución</label>
+                                                        <input id="nom_ins" onkeyup="verf_text(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Nombre Institución"
+                                                            data-tippy-content="Digite el nombre de la institución" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="pais">País</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="pais" data-tippy-content="Seleccione el pais relacionado" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                            <option>Opc 5</option>
+                                                            <option>Opc 6</option>
+                                                            <option>Opc 7</option>
+                                                            <option>Opc 8</option>
+                                                            <option>Opc 9</option>
+                                                            <option>Opc 10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="dep">Departamento</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="dep" data-tippy-content="Seleccione el departamento relacionado" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                            <option>Opc 5</option>
+                                                            <option>Opc 6</option>
+                                                            <option>Opc 7</option>
+                                                            <option>Opc 8</option>
+                                                            <option>Opc 9</option>
+                                                            <option>Opc 10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="ciudad">Ciudad</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="ciudad" data-tippy-content="Seleccione la ciudad relacionada" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="aoGra">Año de Grado</label>
+                                                        <input id="aoGra" type="text" onkeyup="verf_num(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            data-tippy-content="Digite el año en el cual se graduo" placeholder="Año de Grado" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row ">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="prog">Programa</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="prog" data-tippy-content="Seleccione el programa relacionado" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="modl">Modalidad</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="modl" data-tippy-content="Seleccione la modalidad relacionada" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <h5 style="font-weight: bold;">Notas Bachillerato</h5>
+                                                        <p class="card-text txt-eafit">
+                                                            Si tu colegio tiene hasta el grado 11 y lo estás cursando en
+                                                            este momento. la adminisión se hará con base en las notas
+                                                            definitivas del grado 10; si tu colegio tiene hasta grado 12
+                                                            y lo estás cursando en este momento, la admisión se hará con
+                                                            base en las notas del grado 11. Si ya te has graduado, la
+                                                            admisión se hrá con base en las notas definitivas obtenidas
+                                                            en el máximo grado que tiene tu colegio.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="graB">Grado de bachillerato que estas
+                                                            cursando</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="graB" data-tippy-content="Seleccione el grado al cual pertenece actualmente"
+                                                            required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="esc">Selecciona escala de evaluación</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="esc" data-tippy-content="Seleccione su escala de evaluación" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <h5 style="font-weight: bold;">Notas de cada materia:</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat1">Ingles</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat1" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat2">Matematicas</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat2" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat3">Fisica</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat3" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat4">Filosofia</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat4" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat5">Quimica</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat5" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row ">
+                                                <label class="col-sm-3 col-form-label" for="mat6">Sociales</label>
+                                                <div class="col-sm-2">
+                                                    <input id="mat6" onkeyup="verf_num(this)"
+                                                        class="form-control form-control-sm custom-control custom-control-inline"
+                                                        type="text" placeholder="Nota" data-tippy-content="Digite su nota" required>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group float-left">
+                                <button id="return_inf_aca" type="button" class="btn btn-info">Regresar</button>
+                            </div>
+                            <div class="form-group float-right">
+                                <button id="cont_inf_aca" type="submit" form="inf_aca"
+                                    class="btn btn-info">Continuar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col col-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">Opciones</p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="guardar_icon"></span>GUARDAR</a>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="limpiar_icon"></span>LIMPIAR</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-row">
+                                        <div class="col col-6">
+                                            <a id="dis_opc" class="card-text txt-eafit selc" style=""><span
+                                                    class="atr_icon"></span>ATRAS</a>
+                                        </div>
+                                        <div class="col col-6" style="text-align-last: end;">
+                                            <a id="dis_opc" class="card-text txt-eafit selc" style="">ADELANTE<span
+                                                    class="ade_icon"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seccion Formulario [Informacion Academica]-->
+
+                <!-- Seccion Formulario [Dominio de idiomas]-->
+                <div id="dom_idi_sec" class="body_form h-100" style="display:none;">
+                    <div class="row justify-content-center h-100">
+                        <div class="col col-9">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <form id="dom_idi" class="dom_idi" novalidate>
+                                        <div class="form-group txt-eafit">
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <h5 style="font-weight: bold;">Bilinguismo negocios
+                                                            internacionales</h5>
+                                                        <p class="card-text txt-eafit">
+                                                            Para realizar tu matricula el pregrado de Negocios
+                                                            Internacionales, deberas acreditar bilinguismo en ingles.
+                                                            Por lo que debes adjuntar una prueba bajo alguno de los
+                                                            examenes internacionales (correspondientes al Marco Común
+                                                            Europeo [MCERL]) que acredite el puntaje requerido para el
+                                                            ingreso. Si tienes alguna duda puedes consultar el
+                                                            reglamento de bilinguismo: <a
+                                                                href="www.eafit.edu.co/bilimguismo">www.eafit.edu.co/bilimguismo</a>.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            Si aún no haz presentado la prueba, la podras realizar en
+                                                            nuestro centro de idiomas o en un centro acreditado para
+                                                            hacerlo. Esta debe ser entregada y adjuntada para realizar
+                                                            el proceso de matricula.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            Este certificado será valido para el ingreso al pregrado por
+                                                            12 meses a partir de la fecha de presentación del examen. Si
+                                                            el certificado es otorgado por el centro de idiomas EAFIT.
+                                                            será valido por 2 años a partir de la fecha de culminación
+                                                            del ultimo curso aprobado.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            Si terminaste tu bachillerato en una institución de
+                                                            educación formal localizada en un pais cuyo idioma nativo es
+                                                            el que elegiste para certificar, se convalidará con el
+                                                            diploma/acta de grado entregado para la admisión.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            Asi mismo, deberás antes de obtener tu grado, acreditar un
+                                                            tercer idioma, Selecciona el idioma que quisieras acreditar.
+                                                        </p>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                        <h5 style="font-weight: bold;">Bilinguismo negocios
+                                                            internacionales</h5>
+                                                        <p class="card-text txt-eafit">
+                                                            Durante tu pregrado se te solicitará acreditar un nivel B2
+                                                            de bilinguismo según el Marco Común Europeo (MCERL),
+                                                            Selecciona el idioma que quieras acreditar.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            Si ya tienes un examen internacional que acredite este nivel
+                                                            lo puedes adjuntar, De lo contrario, solo selecciona el
+                                                            idioma a acreditar y cuando lo presentes o sea requerido
+                                                            adjuntalo. Si quieres saber más sobre el reglamento de
+                                                            bilinguismo ingresa a <a
+                                                                href="www.eafit.edu.co/bilinguismo">www.eafit.edu.co/bilinguismo</a>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="graB">¿Que idioma deseas certificar?</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="graB" data-tippy-content="Seleccione el idioma que desea certificar"
+                                                            required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row align-middle">
+                                                <div class="col-sm-3 align-middle">
+                                                    <label class="col-form-label align-middle" data-tippy-content="Califique su nivel de lectura" for="lect">Nivel de
+                                                        Lectura:</label>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="lect"
+                                                                id="Radio1" value="option1" required> ALTO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="lect"
+                                                                id="Radio2" value="option2" required> MEDIO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="lect"
+                                                                id="Radio3" value="option3" required> BAJO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row align-middle">
+                                                <div class="col-sm-3 align-middle">
+                                                    <label class="col-form-label align-middle" data-tippy-content="Califique su nivel de escritura" for="lect">Nivel de
+                                                        Escritura:</label>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="escr"
+                                                                id="Radio1" value="option1" required> ALTO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="escr"
+                                                                id="Radio2" value="option2" required> MEDIO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="escr"
+                                                                id="Radio3" value="option3" required> BAJO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-row align-middle">
+                                                <div class="col-sm-3 align-middle">
+                                                    <label class="col-form-label align-middle" data-tippy-content="Califique su nivel de conversación" for="lect">Nivel de
+                                                        conversación:</label>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name=""
+                                                                id="Radio1" value="option1" required> ALTO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name=""
+                                                                id="Radio2" value="option2" required> MEDIO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2 align-middle">
+                                                    <div class="form-check form-check-inline align-middle">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name=""
+                                                                id="Radio3" value="option3" required> BAJO
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="cert">¿Tienes este idioma certificado?</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="certS" name="cert"
+                                                                class="custom-control-input" title="Si" required>
+                                                            <label class="custom-control-label" for="certS">Si</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="certN" name="cert"
+                                                                class="custom-control-input" title="No" required>
+                                                            <label class="custom-control-label" for="certN">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="pru_pre">Prueba Presentada</label>
+                                                        <select
+                                                            class="form-control custom-control form-control-sm txt-eafit"
+                                                            id="pru_pre" data-tippy-content="Seleccione la prueba presentada" required>
+                                                            <option></option>
+                                                            <option>Opc 1</option>
+                                                            <option>Opc 2</option>
+                                                            <option>Opc 3</option>
+                                                            <option>Opc 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="pun">Puntaje Obtenido</label>
+                                                        <input id="pun" onkeyup="verf_num(this)" data-tippy-content="Digite el puntaje obtenido"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Puntaje Obtenido"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="ao_pre">¿Año que presentaste el examen?</label>
+                                                        <input id="ao_pre" onkeyup="verf_num(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="¿Año que presentaste el examen?"
+                                                            data-tippy-content="Digite el año de presentación del examen" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group float-left">
+                                <button id="return_dom_idi" type="button" class="btn btn-info">Regresar</button>
+                            </div>
+                            <div class="form-group float-right">
+                                <button id="continue_dom_idi" type="submit" form="dom_idi"
+                                    class="btn btn-info">Continuar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col col-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">Opciones</p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="guardar_icon"></span>GUARDAR</a>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="limpiar_icon"></span>LIMPIAR</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-row">
+                                        <div class="col col-6">
+                                            <a id="dis_opc" class="card-text txt-eafit selc"><span
+                                                    class="atr_icon"></span>ATRAS</a>
+                                        </div>
+                                        <div class="col col-6" style="text-align-last: end;">
+                                            <a id="dis_opc" class=" card-text txt-eafit selc">ADELANTE<span
+                                                    class="ade_icon"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seccion Formulario [Dominio de Idiomas]-->
+
+                <!-- Seccion Formulario [Informqcion ICFES]-->
+                <div id="inf_icfes_sec" class="body_form h-100" style="display:none;">
+                    <div class="row justify-content-center h-100">
+                        <div class="col col-9">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <form id="inf_icfes" class="inf_icfes" novalidate>
+                                        <div class="form-group txt-eafit">
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <h5 style="font-weight: bold;">Pruebas saber PRO (ICFES)</h5>
+                                                        <p class="card-text txt-eafit">
+                                                            Si terminaste tu bachillerato en el exterior adjunta una
+                                                            copia del certificado del examen que pueda convalidarse para
+                                                            el ingreso a la educación superior en colombia. Si no sabes
+                                                            si el que tienes tiene reconocimiento y validez, ingresa a
+                                                            la pagina oficial del ICFES para conocer los examenes
+                                                            internacionales que son homologables por el ICFES.
+                                                        </p>
+                                                        <p class="card-text txt-eafit">
+                                                            <a href="https://www.icfes.gov.co/">Ir a la página del
+                                                                ICFES</a>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="cert">¿Ya presentaste el examen ICFES?</label>
+                                                        <br>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="icfesS" name="icfes"
+                                                                class="custom-control-input" title="Si" required>
+                                                            <label class="custom-control-label" for="icfesS">Si</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="icfesN" name="icfes"
+                                                                class="custom-control-input" title="No" required>
+                                                            <label class="custom-control-label" for="icfesN">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="pun">Número o codigo del ICFES</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-inline">
+                                                        <div class="form-group">
+                                                            <input id="pun" onkeyup="verf_num(this)"
+                                                                class="col-2 form-control form-control-sm custom-control"
+                                                                type="text" placeholder="AC" data-tippy-content="Digite codigo AC"
+                                                                style="margin-right: 10px;" required>
+                                                            <input id="pun" onkeyup="verf_num(this)"
+                                                                class="col-2 form-control form-control-sm custom-control"
+                                                                type="text" placeholder="AÑO" data-tippy-content="Digite el año"
+                                                                style="margin-right: 10px;" required>
+                                                            <input id="pun" onkeyup="verf_num(this)"
+                                                                class="col-2 form-control form-control-sm custom-control"
+                                                                type="text" placeholder="PERIODO" data-tippy-content="Digite el periodo"
+                                                                style="margin-right: 10px;" required>
+                                                            <input id="pun" onkeyup="verf_num(this)"
+                                                                class="col-2 form-control form-control-sm custom-control"
+                                                                type="text" placeholder="7 DÍGITOS" data-tippy-content="Digite el codigo de 7 dígitos"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <p class="card-text txt-eafit">
+                                                            Si aún no tienes los resultados de las pruebas saber 11 o no
+                                                            las has presentado, ingresa el código de la inscripción
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col col-6">
+                                                    <div class="form-group">
+                                                        <label for="codIns">Código de Inscripción</label>
+                                                        <input id="codIns" onkeyup="verf_num(this)"
+                                                            class="form-control form-control-sm custom-control"
+                                                            type="text" placeholder="Cóodigo de Inscripción"
+                                                            data-tippy-content="Digite el código de inscripción" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <p class="card-text txt-eafit">
+                                                            <span class="adver_icfes_icon"></span>
+                                                            Para Realizar el proceso de admisión y matricula, debe haber
+                                                            presentado el examen ICFES / Saber 11.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group float-left">
+                                <button id="return_inf_icfes" type="button" class="btn btn-info">Regresar</button>
+                            </div>
+                            <div class="form-group float-right">
+                                <button id="continue_inf_icfes" type="submit" form="inf_icfes"
+                                    class="btn btn-info">Continuar</button>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col col-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded" style="">
+                                <div class="card-body">
+                                    <p class="card-text txt-eafit">Opciones</p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="guardar_icon"></span>GUARDAR</a>
+                                    <a class="card-text txt-eafit selc" style="display: flex;"><span
+                                            class="limpiar_icon"></span>LIMPIAR</a>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="form-row">
+                                        <div class="col col-6">
+                                            <a id="dis_opc" class="card-text txt-eafit selc" style=""><span
+                                                    class="atr_icon"></span>ATRAS</a>
+                                        </div>
+                                        <div class="col col-6" style="text-align-last: end;">
+                                            <a id="dis_opc" class="card-text txt-eafit selc" style="">ADELANTE<span
+                                                    class="ade_icon"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Seccion Formulario [Informqcion ICFES]-->
+            </div>
+        </div>
+    </div>
+    <!-- Modal de alertas-->
+    <div class="modal fade txt-eafit" id="msmAlertModal" tabindex="-1" role="dialog"
+        aria-labelledby="msmAlertModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="msmAlertTitle" class="modal-title tl_form"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="msmAlertBody" class="modal-body txt-eafit"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom-script.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('[data-tippy-content]', {
+            followCursor: true,
+            theme: 'EAFIT'
+        });
+    </script>
+</body>
+
+</html>

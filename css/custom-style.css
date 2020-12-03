@@ -1,0 +1,196 @@
+html,body {
+    height: 100%;
+  }
+
+body{
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.nv-side{
+    display: contents;
+}
+
+.div_bg{
+    color: black;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.p_ico{
+    margin-top: -35%;
+    margin-bottom: -35%;
+}
+
+.icon_nav{
+    vertical-align: inherit;
+    mix-blend-mode: screen;
+}
+
+.l_con{
+    background-color: white;
+    height: 100%;
+}
+.r_con{
+    padding-top: 4%;
+    background-color: #EEEEEE;
+}
+
+.bg-nav{
+    background-color: #24306D;
+}
+
+.selc:hover{
+    cursor: pointer;
+}
+
+/*Menu*/
+.lst_act{
+
+}
+
+/*Secciones*/
+.dat_per_sec{
+    
+}
+
+/*icons*/
+
+.atr_icon{
+    background-image: url(../ASSETS/iconos-flecha\ izquierda.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 20px;
+}
+.ade_icon{
+    background-image: url(../ASSETS/iconos-flecha\ derecha.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 20px;
+}
+.guardar_icon{
+    background-image: url(../ASSETS/iconos\ -\ guardar.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+}
+.limpiar_icon{
+    background-image: url(../ASSETS/iconos\ -\ basura.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 20px;
+}
+.adver_icfes_icon{
+    background-image: url(../ASSETS/iconos-alerta.png);
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 20px;
+}
+.per_icon{
+    background-image: url(../ASSETS/iconos\ -\ persona.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-blend-mode: luminosity;
+    background-size: 15px;
+}
+.aca_icon{
+    background-image: url(../ASSETS/iconos\ -\ estudiante.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-blend-mode: luminosity;
+    background-size: 15px;
+}
+.info_aca_icon{
+    background-image: url(../ASSETS/iconos\ -\ documento.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-blend-mode: luminosity;
+    background-size: 15px;
+}
+.gru_fam_icon{
+    background-image: url(../ASSETS/iconos\ -\ hogar.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-blend-mode: luminosity;
+    background-size: 15px;
+}
+.req_icon{
+    background-image: url(../ASSETS/iconos\ -\ agregar\ documentos.png);
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-blend-mode: luminosity;
+    background-size: 15px;
+}
+/*lateral [pasos]*/
+.lst_step{
+    padding-left: 5%;
+    width: fit-content;
+}
+
+/*Estilos Formulario*/
+.body_form{
+   overflow-y: scroll;
+}
+
+.hdd_space{
+    padding-top: 4em;
+}
+
+.tt_form{
+    margin-bottom: -3.5%;
+    margin-top: -3%;
+}
+
+/*Fuentes EAFIT*/
+
+.item_mn{
+    font-family: mint_type;
+    font-size: smaller;
+    color: rgb(223, 223, 223);
+}
+
+.tl_form{
+    font-family: mint_type;
+    color: #1CBAE8;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.sub_tl_form{
+    font-family: mint_type;
+    color: #11227C;
+    font-size: larger;
+    text-align: right;
+    font-weight: bold;
+    padding-left: -50p;
+}
+
+.txt-eafit{
+    font-family: mint_type;
+}
+
+@font-face {
+    font-family: 'nimbus_sans_lregular';
+    src: url('fonts/nimbussanl-reg-webfont.woff2') format('woff2'),
+         url('fonts/nimbussanl-reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mint_type';
+    src: url('fonts/mint_type_-_opinion_pro_extracondensed_light-webfont.woff2') format('woff2'),
+         url('fonts/mint_type_-_opinion_pro_extracondensed_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Tooltips*/
+.tippy-box[data-theme~='EAFIT'] {
+    background-color:rgb(160, 160, 160);
+  }
+
+.tippy-arrow[data-theme~='EAFIT']{
+    background-color:rgb(160, 160, 160);
+}
